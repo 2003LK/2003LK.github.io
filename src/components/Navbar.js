@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -8,16 +8,56 @@ function Navbar() {
       <div className="logo">Logo</div>
       <ul>
         <li>
-          <Link to="/" className="nav-link">Home</Link>
+          <NavLink
+            to="/"
+            className="nav-link"
+            style={({ isActive }) => ({
+              color: isActive ? "purple" : "black",
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/professional" className="nav-link">Professional</Link>
+          <NavLink
+            to="/professional"
+            className="nav-link"
+            style={({ isActive }) => ({
+              color: isActive ? "purple" : "black",
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
+            Professional
+          </NavLink>
         </li>
         <li>
-          <Link to="/projects" className="nav-link">Projects</Link>
+          <NavLink
+            to="/projects"
+            className="nav-link"
+            style={({ isActive }) => ({
+              color: isActive ? "purple" : "black",
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
+            Projects
+          </NavLink>
         </li>
         <li>
-          <Link to="/non-tech" className="nav-link">Non-Tech</Link>
+          <NavLink
+            to="/non-tech"
+            className="nav-link"
+            style={({ isActive }) => ({
+              color: isActive ? "purple" : "black",
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
+            Non-Tech
+          </NavLink>
         </li>
       </ul>
     </nav>

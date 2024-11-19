@@ -1,46 +1,211 @@
+/* General container styling */
 .home-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; 
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: calc(100vh - 100px); /* Take up full height minus header */
+  box-sizing: border-box;
+}
+
+.top-part {
+  display:flex;
+  justify-content: space-inbetween;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+/* Left section (Intro and buttons) */
+.intro {
+  flex: 1; /* Take up equal space with the image section */
+  margin-right: 20px; /* Adds space between text and the image */
+  margin-top: 0;
+}
+
+.intro h1 {
+  font-size: 72px;
+  margin-bottom: 5px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+.name {
+  color: purple;
+}
+
+.intro p {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex; /* Use Flexbox to align and distribute buttons */
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 30px; /* Add spacing between buttons */
+  margin-top: 20px; /* Add some space above the buttons */
+}
+
+.button {
+  text-decoration: none;
+  font-size: 32px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers text/icon within the button */
+  gap: 5px;
+  color: black;
+  text-align: center;
+}
+
+.button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Right section (Profile Image) */
+.image {
+  flex: 1; /* Take up equal space with the intro section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Aligning Gmail and LinkedIn icons properly */
+.button img {
+  margin-right: 5px;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center; /* Center the arrow horizontally */
+  align-items: center; /* Center the arrow vertically */
+  flex-direction: column; /* Position it at the bottom of the viewport */
+  justify-content: center;
+  margin-top: 70px;
+  /* margin: 40px auto; */
+  font-size: 60px; /* Make the arrow much larger */
+  color: black; /* Default arrow color */
+  text-align: center;
+}
+
+.arrow p {
+  font-size: 30px; /* Text size */
+  margin: 0 0 10px; /* Add spacing below the text */
+  color: black; /* Text color */
+}
+
+/* Content Section */
+.content-section {
+  padding: 50px 20px;
+  margin-top: 100px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center; /* Center-align text */
+}
+
+.content-section h2 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: purple; /* Highlight heading color */
+}
+
+.content-section h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  font-size: 30px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: #333; /* Neutral text color */
+}
+
+/* Skills Section Layout */
+.skills-section {
+  display: flex;
+  justify-content: space-between; /* Spread out the skill cards */
+  flex-wrap: wrap; /* Wrap cards if screen width is smaller */
+  gap: 20px; /* Add space between cards */
+}
+
+.skills-card {
+  background-color: #f3e8ff; /* Light purple background */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  flex: 1; /* Equal width for all cards */
+  max-width: 300px; /* Limit the card width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.skills-card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skills-card .skills-icons {
+  display: flex;
+  justify-content: center; /* Center icons horizontally */
+  gap: 10px; /* Space between icons */
+}
+
+.skills-card .skills-icons img {
+  width: 40px; /* Icon size */
+  height: 40px;
+}
+
+/* List Style for Soft Skills */
+.skills-card ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+}
+
+.skills-card li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Global adjustments for responsiveness */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    text-align: center;
+    height: auto; /* Allow height to adjust to content */
   }
-  
+
   .intro {
-    max-width: 50%;
+    margin-right: 0; /* Remove side margin */
+    margin-bottom: 20px; /* Add spacing between intro and image */
   }
-  
-  .intro h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+
+  .image {
+    max-width: 250px;
   }
-  
-  .name {
-    color: purple;
+
+  .arrow {
+    bottom: 10px; /* Adjust bottom spacing for smaller screens */
   }
-  
-  .intro p {
-    font-size: 20px;
-    margin-bottom: 20px;
+
+  .arrow a {
+    font-size: 28px; /* Slightly reduce arrow size */
   }
-  
-  .buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .button {
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: black;
-  }
-  
-  .image img {
-    max-width: 300px;
-    border-radius: 10px;
-  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
