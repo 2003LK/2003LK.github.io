@@ -7,7 +7,10 @@ const Content = ({ jobDetails }) => {
     <div className="content">
       <h1>{jobDetails.title}</h1>
       <p>{jobDetails.description}</p>
-      <div className="video-container">
+
+      {/* Render YouTube video if youtubeUrl exists */}
+      {jobDetails.youtubeUrl && (
+        <div className="video-container">
           <iframe
             width="100%"
             height="400"
@@ -18,7 +21,20 @@ const Content = ({ jobDetails }) => {
             allowFullScreen
           ></iframe>
         </div>
-        <div className="images">
+      )}
+
+      {/* Render local video if videoUrl exists */}
+      {jobDetails.videoUrl && (
+        <div className="video-container">
+          <video width="100%" height="400" controls>
+            <source src={jobDetails.videoUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      )}
+
+      {/* Render images if available */}
+      <div className="images">
         {jobDetails.images.map((src, index) => (
           <img
             key={index}

@@ -12,7 +12,7 @@ const Professional = () => {
     "Microsoft: Full Time Software Engineer": {
       title: "Microsoft: Software Engineer on Azure Databricks",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "I'm so excited to return to Microsoft in August as a Software Engineer for Azure Core, specfically on the Azure Databricks team. While I'm not sure of my specific responsibilities yet, I'm excited to be joining at Level 60 which means increased accountability! For more information on what the team does, check out the media below and read about what I did this past summer on that same team!",
       images: ["/images/databricks.png"],
       youtubeUrl: "https://www.youtube.com/embed/5MC-RVfqnuY"
     },
@@ -33,7 +33,7 @@ const Professional = () => {
     "Cisco x2: ML": {
       title: "Cisco: Machine Learning Intern",
       description:
-        "At Cisco, I built machine learning pipelines to analyze network data and improve system performance.",
+        "During my second internship at Cisco, I worked on log threshold detection for early notification of security threats and outages. Specifically, I used various algorithms available through the Splunk Machine Learning toolkit to evaluate the effectiveness of each at determining a precise and accurate confidence interval for future log counts, and I tuned the parameters of each to best compare and get the most accurate results. Once I chose an algorithm that had the most specific results, I implemented periods into the threshold detection, as logs went down during the night and during the weekends, and we want our confidence intervals to reflect that. Thus, I was able to get a narrow confidence interval above and below the true log count, and predict future log counts",
       images: ["/images/cisco1.jpg"],
       youtubeUrl: "https://www.youtube.com/embed/yjtrb_KNJv0"
     },
