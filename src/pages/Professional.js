@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Content from "./Content";
 import "./Professional.css";
+import ExpandableContent from "./ExpandableContent";
 
 const Professional = () => {
   // State for the currently selected job/internship
@@ -33,7 +34,7 @@ const Professional = () => {
     "Cisco x2: ML": {
       title: "Cisco: Machine Learning Intern",
       description:
-        "During my second internship at Cisco, I worked on log threshold detection for early notification of security threats and outages. Specifically, I used various algorithms available through the Splunk Machine Learning toolkit to evaluate the effectiveness of each at determining a precise and accurate confidence interval for future log counts, and I tuned the parameters of each to best compare and get the most accurate results. Once I chose an algorithm that had the most specific results, I implemented periods into the threshold detection, as logs went down during the night and during the weekends, and we want our confidence intervals to reflect that. Thus, I was able to get a narrow confidence interval above and below the true log count, and predict future log counts",
+        "During my second internship at Cisco, I worked on log threshold detection for early notification of security threats and outages. Specifically, I used various algorithms (ARIMA, StateSpaceForecast) available through the Splunk Machine Learning toolkit to evaluate the effectiveness of each at determining a precise and accurate confidence interval for future log counts, and I tuned the parameters of each to best compare and get the most accurate results. Once I chose an algorithm that had the most specific results, I implemented periods into the threshold detection, as logs went down during the night and during the weekends, and we want our confidence intervals to reflect that. Thus, I was able to get a narrow confidence interval above and below the true log count, and predict future log counts. This project was done using Python and various Machine Learning toolkits.",
       images: ["/images/cisco1.jpg"],
       youtubeUrl: "https://www.youtube.com/embed/yjtrb_KNJv0"
     },
@@ -73,7 +74,7 @@ const Professional = () => {
       />
 
       {/* Content Component */}
-      <Content jobDetails={jobs[selectedJob]} />
+      <ExpandableContent jobDetails={jobs[selectedJob]} />
     </div>
   );
 };
